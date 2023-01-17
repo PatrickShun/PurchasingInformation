@@ -1,0 +1,1145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="中国河北政府采购网">
+<meta name="SiteDomain" content="www.ccgp-hebei.gov.cn">
+<meta name="SiteIDCode" content="1300000065">
+<meta name="ColumnName" content="政府采购意向">
+<meta name="ColumnDescription" content="政府采购意向">
+<meta name="ColumnKeywords" content="政府采购意向">
+<meta name="ColumnType" content="政府采购意向">
+    <title>政府采购意向列表页面</title>
+    <script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../img/checkCity.js"></script>
+    <script language="javascript" type="text/javascript" src="../../../img/My97DatePicker/WdatePicker.js"></script>
+
+    <link href="../../../img/css.css" rel="stylesheet" type="text/css" />
+
+    <!--
+    描述： BS框架编码开发必需inc文件
+    功能： 框架必需Js、Css、权限按钮计算
+    使用方式：  include标签引入到具体面页
+    适用范围： 框架内面页之必需引用（外层面页不建议使用）
+    -->
+    <!-- 框架必需 开始 -->
+    <script type="text/javascript" src="../../../libs/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../libs/js/bootstrap.min.js"></script>
+    <link href="../../../libs/js/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../../libs/js/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- 框架必需 结束 -->
+    <script>
+        function autoIframeHeight(iframe){
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        }
+        $(function(){
+            $("#navi").find("a").eq(0).html("首页");
+        });
+    </script>
+    <style type="text/css">
+        #pageIndex a {
+            color: #08c;
+            text-decoration: none;
+        }
+        #pageIndex ul > li:first-child{
+            border-left-width: 1px;
+            -webkit-border-bottom-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            -webkit-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            -moz-border-radius-topleft: 4px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        function goto(channelid)
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                if(channelid=='240117'){
+                    window.location.href='news.jsp';
+                }
+                else{
+                    window.location.href='index.jsp?channelid='+channelid;
+                }
+            }
+            else{
+                document.searchform.channelid.value = channelid;
+                if(channelid=='240117'){
+                    document.searchform.perpage.value = 16;
+                }
+                else{
+                    document.searchform.perpage.value = '';
+                }
+                document.searchform.submit();
+            }
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+        <!--重置-->
+        function ResetInput() {
+            document.getElementById("searchform").reset();
+        }
+        <!--checkInput检索-->
+        function checkInput()
+        {
+    urlinfo=window.location.href;
+     urlinfo=decodeURI(urlinfo);
+     len=urlinfo.length;
+    offset=urlinfo.indexOf("?");
+    newsidinfo=urlinfo.substr(offset,len);
+    newsids=newsidinfo.split("=");
+    newsid=newsids[1];
+
+    var arr=urlinfo.split("/");
+       city=arr[arr.length-4];
+       lanmu=arr[arr.length-2];
+         document.getElementById("lanmu").value=lanmu; 
+         document.getElementById("city").value=city;
+        document.getElementById("searchform").submit();
+        document.getElementById("tablediv").style.display="none";  
+        document.getElementById("iframediv").style.display="";
+    }
+    </script>
+</head>
+
+<body onLoad="loadProvince()">
+
+<!--header start-->
+
+<iframe src="../../index_759.html" frameborder=0 marginwidth=0 marginheight=0 width=100% scrolling="no" onload="autoIframeHeight(this)" ></iframe>
+<!--header end-->
+
+<div style="display:none">
+    <form id="hmoreform" method="post" action="#">
+        <!-- <input id="hcurcolumnid" name="curcolumnid" type="hidden" /> -->
+        <input name="citycode" type="hidden" value="130000000" />
+        <input name="cityname" type="hidden" value="省本级" />
+    </form>
+    <form id="changefirstform" method="post" action="#">
+        <input id="citycode" name="citycode" type="hidden" value="130000000" />
+        <input id="cityname" name="cityname" type="hidden" value="省本级" />
+    </form>
+</div>
+<!--main start-->
+<table width="1022" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td height="197" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="1002" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="211" valign="top">
+                        <!--left start-->
+                        
+                        <iframe src="../index_659.html" frameborder=0 marginwidth=0 marginheight=0 width=100% scrolling="no" onload="autoIframeHeight(this)" ></iframe>
+                        <!--left end-->
+                    </td>
+                    <td valign="top">
+                        <!--right start-->
+
+                        <!--导航和搜索 start-->
+                        <div style="width:780px;height:64px;">
+                            <table width="780" border="0" align="right" cellpadding="0" cellspacing="1" bgcolor="#E4E4E4">
+                                <tr>
+                                    <td height="64" bgcolor="#EAEAEA">
+                                        <table width="98%" border="0" align="right" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <!--导航 start-->
+                                                <td align="left" id="navi">
+                                                    <span class="txt1">您当前位置：</span>
+                                                    <a href="../../" title="省本级" class='a3'>省本级</a>><a href="../" title="政府采购意向公告" class='a3'>政府采购意向公告</a>>政府采购意向
+                                                    <!--<a class="a3" onclick="changefirst()">首页</a>
+                                                    <span class="txt1">&gt;</span>
+                                                    <a href="#" class="a3" onclick="watchmorebiddingannc()">采购公告</a>
+                                                    <span class="txt1">&gt;</span>
+                                                    <span class="txt6">招标公告</span>-->
+                                                </td>
+                                                <!--导航 end-->
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    <!--搜索 start-->
+                             <table width="760" border="0" align="right" cellpadding="0" cellspacing="0">
+                                                        <form name="searchform" id="searchform" action="http://search.hebcz.cn:8080/was5/web/search?channelid=218195" accept-charset="UTF-8" target="contentframe" method="get" style="vertical-align: bottom" >
+                                                            
+                                <tr>
+
+                                                                <td width="73" class="txt1" align="right">
+                                                                    发布时间：
+                                                                </td>
+                                                                <td colspan=2>
+                                                                     <input id="fstarttime" name="fstarttime" class="date" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" style="width: 39%; margin-top: 0px !important;margin-bottom: 4px !important;" />
+
+                                                                    <span class="txt1" style="width: 20%;">&nbsp;至&nbsp;</span>
+                                                                    <input id="fendtime" name="fendtime" class="date" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" style="width: 40%; margin-top: 0px !important;margin-bottom: 4px !important;" />
+                                                                </td>
+                                                                <td width="123" class="txt1" align="right">项目内容：</td>
+                                                                <td width="202">
+                                                                    <input name="searchword1" id="searchword1" type="text" class="forminputshort" value="" style="text-indent: -1px;width:100px;height:14px;margin-bottom: 2px;" />
+                                                                </td>
+                                                                
+
+
+                                                            </tr>
+                              
+                                <tr align="center">
+                                    <td colspan=5>
+                                                                    <input type="button" class="jiansuo" value="检索" name="button" onclick="return checkInput()" style="position:relative;left:21px;" />
+                                                                    <input type="button" class="jiansuo" value="重置" name="button" onclick="ResetInput()" style="position:relative;left:56px;" />
+
+                                </td>
+                                                                
+                                                                                                                                   </td>
+                                </tr>
+                                <input id="channelid" type="hidden" name="channelid" value="218195" />
+                                <input id="searchword" type="hidden" name="searchword" value="" />
+                                <input id="sydoctitle" type="hidden" name="sydoctitle" value="" />
+                                <input id="lanmu" type="hidden" name="lanmu" value="" />
+                                <input id="city" type="hidden" name="city" value="" />
+                            </form>
+                              </table>
+                                                    <!--<table width="760" border="0" align="right" cellpadding="0" cellspacing="0">
+                                                        <form name="searchform" id="searchform" action="http://search.hebcz.cn:8080/was5/web/search?channelid=240117" accept-charset="UTF-8" target="contentframe" method="get" style="vertical-align: bottom" >
+                                                            <tr>
+
+                                                                <td width="73" class="txt1" align="right">
+                                                                    地区：
+                                                                    <div id="citydiv" style="display:none">
+                                                                    </div>
+                                                                </td>
+                                                                <td width="102">
+                                                                    <select name="province" id="province" onchange="cityName(this.selectedIndex)" class="denglu" style="text-indent: -1px;width:110px;height:24px;">
+                                                                        <option value="">
+                                                                            ---请选择---
+                                                                        </option>
+                                                                    </select>
+                                                                </td>
+                                                                <td width="102">
+                                                                    <select name="city" id="city" class="denglu" style="text-indent: -1px;width:110px;height:24px;">
+                                                                        <option value="">
+                                                                            ---请选择---
+                                                                        </option>
+                                                                    </select>
+                                                                </td>
+                                                                <td width="73" class="txt1" align="right">采购方式： </td>
+                                                                <td width="102">
+                                                                    <select id="purchaseWay" name="purchaseWay" class="denglu" style="text-indent: -1px;width:114px;height:24px;">
+                                                                        <option value=''>---请选择---</option>
+                                                                        <option value='公开招标'>公开招标</option>
+                                                                        <option value='竞争性磋商'>竞争性磋商</option>
+                                                                        <option value='竞争性谈判'>竞争性谈判</option>
+                                                                        <option value='邀请招标'>邀请招标</option>
+                                                                        <option value='询价'>询价</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td width="73" class="txt1" align="right">
+                                                                    采购编码：
+                                                                </td>
+                                                                <td width="102">
+                                                                    <input name="txtcgbm" id="txtcgbm" type="text" class="forminputshort" value="" style="text-indent: -1px;width:100px;height:14px;margin-bottom: 2px;" />
+                                                                </td>
+
+
+                                                            </tr>
+
+                                                            <tr>
+
+                                                                <td width="73" class="txt1" align="right">
+                                                                    标题：
+                                                                </td>
+                                                                <td colspan=2>
+                                                                    <input name="titlename" id="titlename" type="text" class="forminputshort" value="" style="text-indent: -1px;width:233px;height:14px;margin-bottom: 2px;" />
+                                                                </td>
+                                                                <td width="73" class="txt1" align="right">采购人：</td>
+                                                                <td width="102">
+                                                                    <input name="searchword1" id="searchword1" type="text" class="forminputshort" value="" style="text-indent: -1px;width:100px;height:14px;margin-bottom: 2px;" />
+                                                                </td>
+                                                                <td width="50" class="txt1" align="right">
+                                                                    代理机构：
+                                                                </td>
+                                                                <td width="102">
+                                                                    <input name="txtdljg" id="txtdljg" type="text" class="forminputshort" value="" style="text-indent: -1px;width:100px;height:14px;margin-bottom: 2px;" />
+                                                                </td>
+
+
+                                                            </tr>
+
+                                                            <tr>
+
+                                                                <td width="73" class="txt1" align="right">
+                                                                    发布时间：
+                                                                </td>
+                                                                <td colspan=2>
+                                                                    <input id="fstarttime" name="fstarttime" class="date" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" style="width: 39%; margin-top: 0px !important;margin-bottom: 4px !important;" />
+
+                                                                    <span class="txt1" style="width: 20%;">&nbsp;至&nbsp;</span>
+                                                                    <input id="fendtime" name="fendtime" class="date" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" style="width: 40%; margin-top: 0px !important;margin-bottom: 4px !important;" />
+
+                                                                </td>
+
+                                                                <td style="padding:0 0 0 0">
+                                                                    <input type="button" class="jiansuo" value="检索" name="button" onclick="return checkInput()" style="position:relative;left:21px;" />
+                                                                </td>
+                                                                <td style="padding:0 0 0 0">
+                                                                    <input type="button" class="jiansuo" value="重置" name="button" onclick="ResetInput()" style="position:relative;left:56px;" />
+                                                                </td>
+
+                                                            </tr>
+
+
+
+                                                            <div>
+                                                                <input type="hidden" name="channelid" value="240117" />
+                                                                <input name="lanmu" id="lanmu" type="hidden" />
+                                                                <input name="morelanmu" id="morelanmu" type="hidden" />
+                                                                <input name="syprovince" id="syprovince" type="hidden" />
+                                                                <input name="sydoctitle" id="sydoctitle" type="hidden" />
+                                                                <input name="admindivcode" id="admindivcode" type="hidden" />
+                                                                <input name="purchaseWay1" id="purchaseWay1" type="hidden" />
+                                                                <input name="PurchaserName" id="PurchaserName" type="hidden" />
+                                                            </div>
+
+                                                        </form>
+
+                                                    </table>-->
+                                                    <!--搜索 end-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--导航和搜索 end-->
+
+                        <!--列表 start-->
+
+
+                        <div id="tablediv" style="display:">
+                            <table id="moredingannctable" width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745837.html" target="_blank" class='a3'>河北省住房和城乡建设厅本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省住房和城乡建设厅本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745826.html" target="_blank" class='a3'>河北广播电视台本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北广播电视台本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745794.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745798.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745802.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745805.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745807.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745809.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745811.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第三地质大队2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第三地质大队</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745731.html" target="_blank" class='a3'>河北工艺美术职业学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北工艺美术职业学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745668.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745677.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745685.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745673.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745680.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745686.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745688.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745689.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745683.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745687.html" target="_blank" class='a3'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局第四地质大队（河北省水源涵养研究中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745690.html" target="_blank" class='a3'>河北省地质矿产勘查开发局国土资源勘查中心（河北省矿山和地质灾害应急救援中心）2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省地质矿产勘查开发局国土资源勘查中心（河北省矿山和地质灾害应急救援中心）</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745692.html" target="_blank" class='a3'>河北省体育局自行车运动中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省体育局自行车运动中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745693.html" target="_blank" class='a3'>河北省体育局自行车运动中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省体育局自行车运动中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745694.html" target="_blank" class='a3'>河北省体育局自行车运动中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省体育局自行车运动中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745695.html" target="_blank" class='a3'>河北省体育局自行车运动中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省体育局自行车运动中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745691.html" target="_blank" class='a3'>河北省体育局自行车运动中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省体育局自行车运动中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745615.html" target="_blank" class='a3'>河北省商务厅本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省商务厅本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745535.html" target="_blank" class='a3'>河北省水利科学研究院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省水利科学研究院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745537.html" target="_blank" class='a3'>河北省水文勘测研究中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省水文勘测研究中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745311.html" target="_blank" class='a3'>河北省工业和信息化厅本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省工业和信息化厅本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745251.html" target="_blank" class='a3'>河北省发展和改革委员会本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省发展和改革委员会本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745245.html" target="_blank" class='a3'>河北省人民检察院本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省人民检察院本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745230.html" target="_blank" class='a3'>河北省南运河河务中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省南运河河务中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745226.html" target="_blank" class='a3'>河北省南运河河务中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省南运河河务中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745185.html" target="_blank" class='a3'>河北工程大学2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北工程大学</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745184.html" target="_blank" class='a3'>河北大学2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北大学</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745183.html" target="_blank" class='a3'>河北大学2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北大学</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745182.html" target="_blank" class='a3'>河北化工医药职业技术学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北化工医药职业技术学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745181.html" target="_blank" class='a3'>承德医学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>承德医学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745177.html" target="_blank" class='a3'>承德医学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>承德医学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745174.html" target="_blank" class='a3'>承德医学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>承德医学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745179.html" target="_blank" class='a3'>承德医学院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>承德医学院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745120.html" target="_blank" class='a3'>河北广播电视台本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北广播电视台本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745076.html" target="_blank" class='a3'>河北广播电视台本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北广播电视台本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230116_1745069.html" target="_blank" class='a3'>河北经济管理学校2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-16</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北经济管理学校</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230113_1744853.html" target="_blank" class='a3'>河北省生态环境厅本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-13</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省生态环境厅本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230113_1744858.html" target="_blank" class='a3'>河北省辐射环境安全技术中心2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-13</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省辐射环境安全技术中心</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230113_1744862.html" target="_blank" class='a3'>河北省生态环境厅本级2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-13</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北省生态环境厅本级</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230113_1744820.html" target="_blank" class='a3'>河北医科大学第三医院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-13</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北医科大学第三医院</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td width='33' height='30' align='center'><img src='../../../img/33.jpg' width='8' height='8' /></td>
+                                        <td><a href="./202301/t20230113_1744826.html" target="_blank" class='a3'>河北医科大学第三医院2023年01至12月政府采购意向</a></td>
+                                    </tr>
+                                    <tr bgcolor='#E3EDF6'>
+                                        <td height='30' align='center'>&nbsp;</td>
+                                        <td class='txt1'>
+                                            发布时间：<span class='txt'>2023-01-13</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            采购人：<span class='txt'>河北医科大学第三医院</span>
+                                        </td>
+                                    </tr>
+                                
+                            </table>
+
+                            <!--列表 end-->
+
+                            <!--分页 start-->
+                            <table align="center" width="750" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                </tr>
+                                <tr align="right">
+                                    <td colspan="3" height="63">
+                                        <div style="display:block" id="pageIndex" class="pagination">
+                                            <ul>
+
+                                                <SCRIPT LANGUAGE="JavaScript">
+                                                    <!--
+                                                    function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt){
+                                                        if(_nPageCount == null || _nPageCount<=1){
+                                                            return;
+                                                        }
+                                                        var nCurrIndex = _nCurrIndex || 0;
+
+                                                        for(var i=0; i<_nPageCount; i++){
+                                                            var sPageName = (i == 0 ? _sPageName : (_sPageName+"_" + i)) + "."+_sPageExt;
+
+                                                            if(nCurrIndex == i){
+                                                                document.write("<li class='active'><a>"+(i+1) + "</a></li>");
+                                                            }else{
+                                                                document.write("<li><a href='" + sPageName + "'>"+(i+1)+"</a></li>");
+                                                            }
+
+                                                        }
+                                                        document.write("<li><a href='?serchword='>更多</a></li>");
+                                                    }
+                                                    //WCM置标
+                                                    createPageHTML(10, 0, "index","html");
+                                                    //-->
+                                                </SCRIPT>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--分页 start-->
+
+                        <!--right end-->
+                        <div id="iframediv"  style="display:none;">
+                            <!--
+                            <iframe name="contentframe" id="contentframe" src="http://search.hebcz.cn:8080/was5/web/search?channelid=240117" width="100%" heigth="1905px" frameborder="0" scrolling="no"  style="border:0px;"></iframe>
+                            -->
+                            <iframe name="contentframe" src="" frameborder=0 marginwidth=0 marginheight=0 width=100% scrolling="no" height="3350px"></iframe>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+<script>
+     <!--首页跳转检索-->
+urlinfo=window.location.href;
+       urlinfo=decodeURI(urlinfo);
+       len=urlinfo.length;
+       offset=urlinfo.indexOf("?");
+       newsidinfo=urlinfo.substr(offset,len);
+       newsids=newsidinfo.split("=");
+       newsid=newsids[1];
+
+  var arr=urlinfo.split("/");
+       city=arr[arr.length-4];
+       lanmu=arr[arr.length-2]; 
+  strsnews="docpuburl="+lanmu;
+  if(newsid!=""){
+   //strsnews=strsnews+" and doctitle="+newsid;
+}
+//弹出strsnews
+
+   if(newsid!=null){
+    $(document).ready(function(){       
+         document.getElementById("sydoctitle").value=newsid; 
+         document.getElementById("lanmu").value=lanmu; 
+         document.getElementById("city").value=city;
+        document.getElementById("searchform").submit();
+        document.getElementById("tablediv").style.display="none";  
+        document.getElementById("iframediv").style.display="";
+     }); 
+}else{
+    document.getElementById("tablediv").style.display="";
+    document.getElementById("iframediv").style.display="none";
+}</script>
+<!--main end-->
+
+<!--footer start-->
+<style type="text/css">
+        #zfdb img {
+            border: 0 none;
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    </style>
+
+    <div style="background-color:#2E83C3">
+        <table width="1022" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="100" bgcolor="#2E83C3">
+                    <table width="1002" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+
+                            <td height="100" valign="top">
+                                <table width="1002" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="24">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td height="42" align="center">
+                                            <a class="a7" onclick="changefirstHead()">首页</a>
+                                            <a class="a7" onclick="moreColumnHead('xinwenzhongxin-caigouxinwen','getXwzxList_1')"> |新闻中心</a>
+                                            <a class="a7" onclick="moreColumnHead('','getBidingList_1')"> | 采购公告</a>
+                                            <a class="a7" onclick="moreColumnHead('caigouxinxi','getCgxxList_1')"> | 采购信息</a>
+                                            <a class="a7" onclick="moreColumnHead('zhongyaotongzhi','getZytzList_1')">| 重要通知</a>
+                                            <a class="a7" onclick="moreColumnHead('zhengcefagui','getZcfgList_1')">| 政策法规</a>
+                                            <a class="a7" onclick="moreColumnHead('lilunshijian','getLlsjList_1')">| 理论实践</a>
+                                            <a class="a7" onclick="moreColumnHead('banshizhinan-caigouren','getBsznList_1')">| 办事指南</a>
+                                            <a class="a7" onclick="moreColumnHead('gonggaotongbao-chengxinjianshe','getGgtbList_1')">| 公告通报</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr> -->
+                                    <tr>
+                                         <td align="center" class="txt5">
+                                            主办单位:河北省财政厅 | Email:hebzfcg@sina.com | 地址:中华南大街48号 | 邮编:050051
+                                            <br />
+                                            技术支持:河北省财政厅信息中心 | 技术支持电话：（0311）66651000 &nbsp;&nbsp;<a href="http://www.ccgp-hebei.gov.cn/province/map/201805/t20180523_847997.html">联系方式</a>
+                                            <br />
+                                            <a href="http://beian.miit.gov.cn" target="_blank" style="color:white;font-weight:normal;">冀ICP备13016076号-2</a>  &nbsp;&nbsp;  网站标识码: 1300000065  &nbsp; <a href="../../map/" class='txt5'>网站地图</a>
+<div style="width:300px;margin:0 auto;text-align: center;">
+<img src="http://www.hebei.gov.cn/hebei/resource/cms/2018/01/img_pc_site/beiantubiao.png" style="float: none;" /> 
+冀公网安备 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13010402001602" target="_blank" style="color:white;font-weight:normal;">13010402001602</a>
+            </div>
+                                            <div id="zfdb">
+                                            <script id="_jiucuo_" sitecode='1300000065' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+                                            <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/05/000/0000/60849783/CA050000000608497830001.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+<!--footer end--></body>
+</html>
