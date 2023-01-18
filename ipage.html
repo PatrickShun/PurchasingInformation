@@ -1,0 +1,1236 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+	<title></title>
+  <link href="css/was.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="js/suggest-yui2.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+  <script type="text/javascript" src="zbgg/messager.js"></script>
+<script type="text/javascript" src="zbgg/pinyin.js"></script>
+<script type="text/javascript" src="zbgg/ajax.js" charset="UTF-8"></script>
+<link href="zbgg/css1.css" rel="stylesheet" type="text/css">
+<!-- <script type="text/javascript" src="zbgg/jquery-1.9.1.min.js"></script>  --> 
+<script type="text/javascript" src="zbgg/bootstrap.min.js"></script>  
+<link href="zbgg/bootstrap.min.css" rel="stylesheet" type="text/css" />  
+<link href="zbgg/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />  
+<script type="text/javascript" src="zbgg/bootstrap-paginator.min.js"></script>
+
+<script type="text/javascript">
+    function goto(channelid)
+    {
+        if (document.searchform.searchword.value.trim()==''){
+            if(channelid=='218195'){
+                 window.location.href='news.jsp';
+            }
+            else{
+            window.location.href='index.jsp?channelid='+channelid;
+            }
+        }
+        else{
+            document.searchform.channelid.value = channelid;
+            if(channelid=='218195'){
+                document.searchform.perpage.value = 16;
+            }
+            else{
+                document.searchform.perpage.value = '';
+            }
+            document.searchform.submit();
+        }
+    }
+    String.prototype.trim = function () {
+        return this.replace(/^\s*/, "").replace(/\s*$/, "");
+    }
+
+    function checkInput()
+    {
+           
+           var citys=$("#city option:selected").val();
+           var province=$("#province option:selected").val(); 
+           var city="130000000";
+           if(citys!=null&&citys!=""){
+               city=citys;
+           }else if(province!=null&&province!=""){
+                city=province;  
+           }else{
+               city="130000000";
+           }
+        //alert(city);
+          var options=$("#purchaseWay option:selected").val(); 
+              if(options=="-1"){
+                 options="公开招标";
+              } 
+         var searchword=document.getElementById("searchword").value;
+         
+         if(searchword==""){       
+            //document.getElementById("searchword").value="admindivcode="+city+" and purchaseWay="+options;
+			document.getElementById("searchword").value=" purchaseWay="+options;
+         }else{
+           // document.getElementById("searchword").value="admindivcode="+city+" and purchaseWay="+options+" and PurchaserName="+searchword;
+		   document.getElementById("searchword").value=" purchaseWay="+options+" and PurchaserName="+searchword;
+         }
+    }
+   
+</script>
+</head>
+<body>
+<div class="outline">
+
+  <table id="moredingannctable" width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tbody>
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_gcs/zfcgyxggAAAA/zfcgyx/202301/t20230106_1740642.html" class="a3" target="_blank">
+                  石家庄经济技术开发区管理委员会本级2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-06
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄经济技术开发区管理委员会本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202301/t20230105_1740269.html" class="a3" target="_blank">
+                  石家庄市龙泉湖园林事务中心2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-05
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市龙泉湖园林事务中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_jxx/zfcgyxggAAAA/zfcgyx/202301/t20230105_1739760.html" class="a3" target="_blank">
+                  井陉县动物卫生监督所2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-05
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               井陉县动物卫生监督所
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_xhhgyyq/zfcgyxggAAAA/zfcgyx/202301/t20230104_1739208.html" class="a3" target="_blank">
+                  河北石家庄循环化工园区应急管理局本级2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-04
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               河北石家庄循环化工园区应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_lcx/zfcgyxggAAAA/zfcgyx/202301/t20230104_1739110.html" class="a3" target="_blank">
+                  石家庄市生态环境局栾城区分局本级2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-04
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市生态环境局栾城区分局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_zdx/zfcgyxggAAAS/zfcgyx/202301/t20230103_1738262.html" class="a3" target="_blank">
+                  正定县市场监督管理局本级2023年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2023-01-03
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               正定县市场监督管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202212/t20221228_1734823.html" class="a3" target="_blank">
+                  石家庄市应急管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-12-28
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市应急管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_wjx/zfcgyxggAAAA/zfcgyx/202212/t20221222_1730797.html" class="a3" target="_blank">
+                  无极县应急管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-12-22
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               无极县应急管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202211/t20221119_1713898.html" class="a3" target="_blank">
+                  中共石家庄市委党校2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-11-18
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               中共石家庄市委党校
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202211/t20221117_1712629.html" class="a3" target="_blank">
+                  石家庄市电子政务中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-11-17
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市电子政务中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202211/t20221116_1711757.html" class="a3" target="_blank">
+                  西柏坡纪念馆2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-11-16
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               西柏坡纪念馆
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202211/t20221114_1710103.html" class="a3" target="_blank">
+                  石家庄市应急管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-11-14
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市应急管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_gcs/zfcgyxggAAAA/zfcgyx/202211/t20221109_1708399.html" class="a3" target="_blank">
+                  石家庄经济技术开发区管理委员会本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-11-09
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄经济技术开发区管理委员会本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202210/t20221021_1697171.html" class="a3" target="_blank">
+                  石家庄市广场管护中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-10-21
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市广场管护中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_xhhgyyq/zfcgyxggAAAA/zfcgyx/202210/t20221013_1691872.html" class="a3" target="_blank">
+                  河北石家庄循环化工园区党政综合办公室本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-10-13
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               河北石家庄循环化工园区党政综合办公室本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_xhhgyyq/zfcgyxggAAAA/zfcgyx/202210/t20221013_1691869.html" class="a3" target="_blank">
+                  河北石家庄循环化工园区党政综合办公室本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-10-13
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               河北石家庄循环化工园区党政综合办公室本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_psx/zfcgyxggAAAA/zfcgyx/202210/t20221009_1688572.html" class="a3" target="_blank">
+                  平山县应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-10-09
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               平山县应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202209/t20220928_1684237.html" class="a3" target="_blank">
+                  中共石家庄市委网络安全和信息化委员会办公室2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-28
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               中共石家庄市委网络安全和信息化委员会办公室
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_wjx/zfcgyxggAAAA/zfcgyx/202209/t20220926_1681970.html" class="a3" target="_blank">
+                  无极县市场监督管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-26
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               无极县市场监督管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_psx/zfcgyxggAAAA/zfcgyx/202209/t20220923_1680930.html" class="a3" target="_blank">
+                  平山县水利局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-23
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               平山县水利局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202209/t20220921_1679210.html" class="a3" target="_blank">
+                  石家庄市卫生监督局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-21
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市卫生监督局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_jzs/zfcgyxggAAAA/zfcgyx/202209/t20220920_1678100.html" class="a3" target="_blank">
+                  晋州市工业和信息化局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-20
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               晋州市工业和信息化局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202209/t20220908_1671596.html" class="a3" target="_blank">
+                  石家庄市公安局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-09-08
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市公安局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202208/t20220825_1661940.html" class="a3" target="_blank">
+                  石家庄市商务局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-08-25
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市商务局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_lqs/zfcgyxggAAAA/zfcgyx/202208/t20220822_1659155.html" class="a3" target="_blank">
+                  石家庄市鹿泉区应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-08-22
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市鹿泉区应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_ys/zfcgyxggAAAA/zfcgyx/202208/t20220819_1658214.html" class="a3" target="_blank">
+                  元氏县应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-08-19
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               元氏县应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_psx/zfcgyxggAAAA/zfcgyx/202208/t20220818_1657347.html" class="a3" target="_blank">
+                  石家庄市生态环境局平山分局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-08-18
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市生态环境局平山分局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202208/t20220803_1647559.html" class="a3" target="_blank">
+                  石家庄市文化广电和旅游局机关2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-08-03
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市文化广电和旅游局机关
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202207/t20220729_1645054.html" class="a3" target="_blank">
+                  石家庄市应急管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-29
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市应急管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_psx/zfcgyxggAAAA/zfcgyx/202207/t20220725_1641339.html" class="a3" target="_blank">
+                  石家庄市生态环境局平山分局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-25
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市生态环境局平山分局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_gyx/zfcgyxggAAAA/zfcgyx/202207/t20220722_1639989.html" class="a3" target="_blank">
+                  高邑县应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-22
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               高邑县应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_xtx/zfcgyxggAAAA/zfcgyx/202207/t20220721_1638937.html" class="a3" target="_blank">
+                  行唐县水利局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-21
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               行唐县水利局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202207/t20220719_1637807.html" class="a3" target="_blank">
+                  石家庄市公安局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-19
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市公安局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_caq/zfcgyxggAAAA/zfcgyx/202207/t20220718_1636699.html" class="a3" target="_blank">
+                  中共石家庄市长安区委宣传部本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-18
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               中共石家庄市长安区委宣传部本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_szx/zfcgyxggAAAA/zfcgyx/202207/t20220718_1636317.html" class="a3" target="_blank">
+                  深泽县卫生健康局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-18
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               深泽县卫生健康局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202207/t20220711_1631543.html" class="a3" target="_blank">
+                  石家庄市中医院2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-11
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市中医院
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202207/t20220708_1630414.html" class="a3" target="_blank">
+                  石家庄市急救中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-08
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市急救中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_jxx/zfcgyxggAAAA/zfcgyx/202207/t20220706_1628557.html" class="a3" target="_blank">
+                  井陉县政府投资项目代建中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-06
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               井陉县政府投资项目代建中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202207/t20220706_1628280.html" class="a3" target="_blank">
+                  石家庄市环境预测预报中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-06
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市环境预测预报中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_szx/zfcgyxggAAAA/zfcgyx/202207/t20220704_1626408.html" class="a3" target="_blank">
+                  深泽县应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-07-04
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               深泽县应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202206/t20220627_1620611.html" class="a3" target="_blank">
+                  石家庄市市场监督管理局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-27
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市市场监督管理局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202206/t20220624_1619169.html" class="a3" target="_blank">
+                  石家庄市司法局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-24
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市司法局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_gcs/zfcgyxggAAAA/zfcgyx/202206/t20220620_1615036.html" class="a3" target="_blank">
+                  石家庄市藁城区卫生健康局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-20
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市藁城区卫生健康局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202206/t20220617_1614203.html" class="a3" target="_blank">
+                  石家庄市中级人民法院本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-17
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市中级人民法院本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sj_xls/zfcgyxggAAAA/zfcgyx/202205/t20220517_1592550.html" class="a3" target="_blank">
+                  河北新乐经济开发区管理委员会本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-05-17
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               河北新乐经济开发区管理委员会本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_xtx/zfcgyxggAAAA/zfcgyx/202206/t20220613_1610553.html" class="a3" target="_blank">
+                  行唐县水利局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-13
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               行唐县水利局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202206/t20220602_1604672.html" class="a3" target="_blank">
+                  石家庄市生态环境局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-02
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市生态环境局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz/zfcgyxgg/zfcgyx/202206/t20220615_1612045.html" class="a3" target="_blank">
+                  石家庄市卫生监督局2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-15
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市卫生监督局
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_lcx/zfcgyxggAAAA/zfcgyx/202205/t20220531_1601820.html" class="a3" target="_blank">
+                  石家庄市栾城区城市工作中心2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-05-31
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               石家庄市栾城区城市工作中心
+              </span>
+            </td>
+          </tr>
+        
+      
+        
+          <tr id="biaoti">
+            <td width="33" height="30" align="center"><img src="zbgg/33.jpg" width="8" height="8"></td>
+              <td>
+                <a href="http://www.ccgp-hebei.gov.cn/sjz/sjz_lsx/zfcgyxggAAAA/zfcgyx/202206/t20220607_1606229.html" class="a3" target="_blank">
+                  灵寿县应急管理局本级2022年01至12月政府采购意向
+                </a>
+              </td>
+          </tr>
+          <tr bgcolor="#E3EDF6">
+            <td height="30" align="center">&nbsp;</td>
+            <td class="txt1">发布时间：
+              <span class="txt">
+                2022-06-07
+              </span> &nbsp;&nbsp;&nbsp;&nbsp;采购人：
+              <span class="txt">
+               灵寿县应急管理局本级
+              </span>
+            </td>
+          </tr>
+        
+      
+    </tbody>
+  </table>
+
+  <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr align="right">
+        <td height="63" colspan="3"><div style="display:block" id="pageIndex" class="pagination">
+          <div id="outlinebar" style="max-width: 100%;color:red;margin-left: 150px;">
+            <span style="font-weight: bold;border: none;background: none">1</span>&nbsp;<a target="_self" href="search?page=2&channelid=218195&perpage=50&outlinepage=10&lanmu=zfcgyx&city=sjz&searchword1=应急">2</a>&nbsp;<a target="_self" href="search?page=3&channelid=218195&perpage=50&outlinepage=10&lanmu=zfcgyx&city=sjz&searchword1=应急">3</a>&nbsp;<a target="_self" href="search?page=4&channelid=218195&perpage=50&outlinepage=10&lanmu=zfcgyx&city=sjz&searchword1=应急">4</a>&nbsp;<a class="next-page" href="search?page=2&channelid=218195&perpage=50&outlinepage=10&lanmu=zfcgyx&city=sjz&searchword1=应急" target="_self">下一页</a>&nbsp;<a class="last-page" href="search?page=4&channelid=218195&perpage=50&outlinepage=10&lanmu=zfcgyx&city=sjz&searchword1=应急" target="_self">尾页</a>&nbsp;
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+
+</body>
+</html>
